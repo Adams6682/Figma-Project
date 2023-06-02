@@ -670,7 +670,21 @@
     display: grid;
   grid-template-columns: repeat(3, 1fr); /* Adjust the number of columns as needed */
   grid-gap: 15px; /* Adjust the gap between grid items */
-  margin-bottom: 70px;
+margin-bottom: 70px;
 }
   
   
+  /* Media query for screens smaller than 768px */
+  @media (max-width: 768px) {
+    .grid-container {
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    }
+  }
+  
+  /* Media query for screens smaller than 576px */
+  @media (max-width: 576px) {
+    .grid-container {
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      grid-gap: 10px;
+    }
+  }
